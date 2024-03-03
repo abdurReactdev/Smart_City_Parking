@@ -1,0 +1,27 @@
+.filter-bar {
+  background-color: grey;
+
+}
+::ng-deep .leaflet-marker-icon img {
+  width: 20px !important;
+}
+
+::ng-deep .leaflet-div-icon {
+  background: transparent !important;
+  border: none !important;
+}
+
+::ng-deep .leaflet-marker-icon span {
+  font-weight: bold;
+}
+.custom-form-select{
+    display: inline-block;
+    width: 200px;
+}
+.card{
+    border: none;
+    background-color: #FFFFFF;
+}
+.sub-text{
+    color:#7F7F7F
+}

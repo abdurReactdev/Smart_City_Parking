@@ -1,0 +1,112 @@
+
+<div>
+  <nav class="navbar p-2" style="background-color: #FFFFFF;">
+  <span class="navbar-brand mb-0 h1 mx-2">Smart Parking System</span>
+  <select (change)="onChange($event)" class="form-select custom-form-select">
+  <option *ngFor="let c of metaData" value="{{c.parking_lot_id}}">{{c.name}}</option>
+ </select>
+</nav>
+
+<div class="container mt-2">
+  <h3>Dashboard</h3>
+ 
+    <div class="row">
+      <div class="col-8">
+        <div class="row">
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-text display-2">{{ currentParkingLot?.parking_lot_id }}</h5>
+            <p class="card-title sub-text">Parking Lot Id</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-body text-center">
+            
+            <h5 class="card-text display-2">{{ currentParkingLot?.free }}</h5>
+            <p class="card-title sub-text">Free Spaces</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-text display-2">{{ currentParkingLot?.occupied }}</h5>
+            <p class="card-title sub-text">Occupied Spaces</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            <h5 class="card-text display-2">{{ currentParkingLot?.soon_due }}</h5>
+            <p class="card-title sub-text">Soon Due Spaces</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2" >
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-body text-center">
+            
+            <h5 class="card-text display-2">{{ currentParkingLot?.due }}</h5>
+            <p class="card-title sub-text">Due Spaces</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card ">
+          <div class="card-body text-center">
+            
+            <h5 class="card-text display-2">{{ currentParkingLot?.overdue }}</h5>
+            <p class="card-title sub-text">Over Due Spaces</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            
+            <h5 class="card-text display-2">{{ currentParkingLot?.ignored }}</h5>
+            <p class="card-title sub-text">Ignored Spaces</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+          <div class="card-body text-center">
+            
+            <h5 class="card-text display-2">{{ currentParkingLot?.total_parking_spaces }}</h5>
+            <p class="card-title sub-text">Total Parking Spaces</p>
+          </div>
+        </div>
+      </div>
+    </div>
+      </div>
+      <div class="col-4">
+        <div class="card" style="height: 100%;">
+          <div class="card-body">
+            
+            <h5 class="card-text">Paking Lot Details</h5>
+            <p class="card-title"><b>Name: </b> {{currentMetaData?.name}}</p>
+            <p class="card-title"><b>Address: </b> {{currentMetaData?.address}}</p>
+            <p class="card-title"><b>City: </b> {{currentMetaData?.city}}</p>
+            <p class="card-title"><b>Zip Code: </b> {{currentMetaData?.zip_code}}</p>
+             <p class="card-title"><b>Country: </b> {{currentMetaData?.country}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    
+    <!-- <div class="mt-2" >
+      <div style="height: 400px; overflow: hidden;" leaflet
+     (leafletMapReady)="onMapReady($event)"
+     [leafletOptions]="options">
+</div> -->
+    <!-- </div> -->
+  </div>
+</div>
